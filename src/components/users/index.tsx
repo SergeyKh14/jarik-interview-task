@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import PaginationControls from "./PaginationControls";
 import UsersTable from "./UsersTable";
 import LanguageSwitcher from "../layout/LanguageSwitcher";
+import { H1 } from "../ui/typography";
 
 export default function Users() {
   const { users, isLoading, error, handlePageChange, totalPages, currentPage } =
@@ -57,7 +58,7 @@ export default function Users() {
           <LanguageSwitcher />
         </div>
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-          <h1 className="text-xl md:text-2xl font-bold">{t.users.title}</h1>
+          <H1 className="text-xl md:text-2xl">{t.users.title}</H1>
           <div className="w-full sm:w-auto sm:max-w-sm">
             <Input
               type="text"
