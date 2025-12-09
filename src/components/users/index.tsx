@@ -8,6 +8,7 @@ import PaginationControls from "./PaginationControls";
 import UsersTable from "./UsersTable";
 import LanguageSwitcher from "../layout/LanguageSwitcher";
 import { H1 } from "../ui/typography";
+import { Spinner } from "../ui/spinner";
 
 export default function Users() {
   const { users, isLoading, error, handlePageChange, totalPages, currentPage } =
@@ -32,7 +33,7 @@ export default function Users() {
     return (
       <div className="w-full h-full mx-auto flex flex-col gap-4 md:gap-6 p-4 md:p-6">
         <div className="flex items-center justify-center h-64">
-          <p className="text-muted-foreground">{t.users.loading}</p>
+          <Spinner className="size-10" />
         </div>
       </div>
     );
